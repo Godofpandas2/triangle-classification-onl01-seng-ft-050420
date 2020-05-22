@@ -18,13 +18,10 @@ class Triangle
       raise TriangleError
     elsif side_a == side_b && side_b == side_c
         @type = :equilateral
-        @type
     elsif side_a == side_b || side_b == side_c || side_c == side_a
         @type = :isosceles
-        @type
     else
        @type = :scalene
-       @type
     end
    end
 
