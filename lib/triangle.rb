@@ -7,14 +7,14 @@ class Triangle
     @sideB=sideB
     @sideC=sideC
    end
-  
 
-   def kind 
+
+   def kind
      sides = [(sideA), (sideB), (sideC)]
-    
-    if  sideA + sideB <= sideC || sideB + sideC <=sideA || sideC + sideA <=sideB 
+
+    if  sideA + sideB <= sideC || sideB + sideC <=sideA || sideC + sideA <=sideB
       # binding.pry
-      raise TriangleError 
+      raise TriangleError
     elsif sideA == sideB && sideB == sideC
         @type = :equilateral
         @type
