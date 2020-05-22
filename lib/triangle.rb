@@ -1,24 +1,25 @@
 require 'pry'
 class Triangle
-  attr_accessor :sideA, :sideB, :sideC, :type
-   def initialize (sideA, sideB, sideC)
 
-    @sideA=sideA
-    @sideB=sideB
-    @sideC=sideC
+  attr_accessor :side_a, :side_b, :side_c, :type
+
+   def initialize (side_a, side_b, side_c)
+    @side_a = side_a
+    @side_b = side_b
+    @side_c = side_c
    end
 
 
    def kind
-     sides = [(sideA), (sideB), (sideC)]
+     sides = [(side_a), (side_b), (side_c)]
 
-    if  sideA + sideB <= sideC || sideB + sideC <=sideA || sideC + sideA <=sideB
+    if  side_a + side_b <= side_c || side_b + side_c <=side_a || side_c + side_a <=side_b
       # binding.pry
       raise TriangleError
-    elsif sideA == sideB && sideB == sideC
+    elsif side_a == side_b && side_b == side_c
         @type = :equilateral
         @type
-    elsif sideA == sideB || sideB == sideC || sideC == sideA
+    elsif side_a == side_b || side_b == side_c || side_c == side_a
         @type = :isosceles
         @type
     else
