@@ -9,6 +9,8 @@ class Triangle
     @side_c = side_c
    end
 
+   class TriangleError < StandardError
+    end
 
    def kind
      sides = [(side_a), (side_b), (side_c)]
@@ -26,7 +28,4 @@ class Triangle
    end
 
 
-
-    class TriangleError < StandardError
-    end
 end
